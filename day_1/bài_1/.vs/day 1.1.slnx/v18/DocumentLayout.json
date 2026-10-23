@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\K\u00CC_1_N\u0102M_4\\C\u00F4ng_Ngh\u1EC7_ASPNET\\day_1\\day 1.1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C50D2DBC-94CD-1DA9-5CD1-20D8E2EA3CBD}|day 1.1\\day 1.1.csproj|d:\\k\u00EC_1_n\u0103m_4\\c\u00F4ng_ngh\u1EC7_aspnet\\day_1\\day 1.1\\day 1.1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C50D2DBC-94CD-1DA9-5CD1-20D8E2EA3CBD}|day 1.1\\day 1.1.csproj|solutionrelative:day 1.1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50D2DBC-94CD-1DA9-5CD1-20D8E2EA3CBD}|day 1.1\\day 1.1.csproj|d:\\k\u00EC_1_n\u0103m_4\\c\u00F4ng_ngh\u1EC7_aspnet\\day_1\\day 1.1\\day 1.1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50D2DBC-94CD-1DA9-5CD1-20D8E2EA3CBD}|day 1.1\\day 1.1.csproj|solutionrelative:day 1.1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50D2DBC-94CD-1DA9-5CD1-20D8E2EA3CBD}|day 1.1\\day 1.1.csproj|d:\\k\u00EC_1_n\u0103m_4\\c\u00F4ng_ngh\u1EC7_aspnet\\day_1\\day 1.1\\day 1.1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50D2DBC-94CD-1DA9-5CD1-20D8E2EA3CBD}|day 1.1\\day 1.1.csproj|solutionrelative:day 1.1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\K\u00CC_1_N\u0102M_4\\C\u00F4ng_Ngh\u1EC7_ASPNET\\day_1\\day 1.1\\day 1.1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "day 1.1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\K\u00CC_1_N\u0102M_4\\C\u00F4ng_Ngh\u1EC7_ASPNET\\day_1\\day 1.1\\day 1.1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "day 1.1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-16T09:53:19.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\K\u00CC_1_N\u0102M_4\\C\u00F4ng_Ngh\u1EC7_ASPNET\\day_1\\day 1.1\\day 1.1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "day 1.1\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\K\u00CC_1_N\u0102M_4\\C\u00F4ng_Ngh\u1EC7_ASPNET\\day_1\\day 1.1\\day 1.1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "day 1.1\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T09:32:15.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\K\u00CC_1_N\u0102M_4\\C\u00F4ng_Ngh\u1EC7_ASPNET\\day_1\\day 1.1\\day 1.1\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "day 1.1\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\K\u00CC_1_N\u0102M_4\\C\u00F4ng_Ngh\u1EC7_ASPNET\\day_1\\day 1.1\\day 1.1\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "day 1.1\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T09:32:03.036Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

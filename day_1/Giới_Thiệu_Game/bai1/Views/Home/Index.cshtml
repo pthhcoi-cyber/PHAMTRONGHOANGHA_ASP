@@ -1,0 +1,1107 @@
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameVerse – Khám Phá Thế Giới Game Đỉnh Cao</title>
+    <meta name="description" content="GameVerse – Nền tảng khám phá game số 1 Việt Nam. RPG, Shooter, Esports, Chiến thuật, Thể thao, Kinh dị và nhiều hơn nữa." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/gameverse.css" asp-append-version="true" />
+</head>
+<body>
+
+    <!-- =========================================================
+       LOADING SCREEN
+       ========================================================= -->
+    <div id="loader" class="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">
+                <div class="loader-hex">⬡</div>
+                <span>Game<span>Verse</span></span>
+            </div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar" id="loader-bar"></div>
+            </div>
+            <p class="loader-text" id="loader-text">Đang tải...</p>
+        </div>
+    </div>
+
+    <!-- =========================================================
+       TICKER BAR
+       ========================================================= -->
+    <div class="ticker-bar">
+        <span class="ticker-label">🔥 HOT</span>
+        <div class="ticker-track">
+            <div class="ticker-inner">
+                <span>🎮 Void Strike Season 3 bắt đầu – Tham gia nhận phần thưởng!</span>
+                <span>🎁 Đăng ký hôm nay – Nhận 30 ngày VIP miễn phí!</span>
+                <span>🏆 Kingdom Fall: Empire Wars – Cập nhật DLC mới!</span>
+                <span>⚡ Flash Sale: Giảm 50% tất cả game trong 24h!</span>
+                <span>🎮 Void Strike Season 3 bắt đầu – Tham gia nhận phần thưởng!</span>
+                <span>🎁 Đăng ký hôm nay – Nhận 30 ngày VIP miễn phí!</span>
+                <span>🏆 Kingdom Fall: Empire Wars – Cập nhật DLC mới!</span>
+                <span>⚡ Flash Sale: Giảm 50% tất cả game trong 24h!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+       NAVBAR
+       ========================================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="nav-logo-hex">⬡</div>
+                <span>Game<span>Verse</span></span>
+            </a>
+
+            <ul class="nav-links" id="main-nav-links">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Trang Chủ</a></li>
+                <li class="nav-item has-dropdown">
+                    <a href="#genres-section" class="nav-link" data-section="genres-section">Thể Loại <svg class="chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="#games-section" data-genre-nav="rpg">🗡️ RPG</a></li>
+                        <li><a href="#games-section" data-genre-nav="shooter">🎯 Bắn Súng</a></li>
+                        <li><a href="#games-section" data-genre-nav="strategy">♟️ Chiến Thuật</a></li>
+                        <li><a href="#games-section" data-genre-nav="racing">🚗 Đua Xe</a></li>
+                        <li><a href="#games-section" data-genre-nav="sports">🌍 Thể Thao</a></li>
+                        <li><a href="#games-section" data-genre-nav="horror">👻 Kinh Dị</a></li>
+                    </ul>
+                </li>
+                <li><a href="#spotlight-section" class="nav-link" data-section="spotlight-section">Nổi Bật</a></li>
+                <li><a href="#esports-section" class="nav-link" data-section="esports-section">Esports</a></li>
+                <li><a href="#news-section" class="nav-link" data-section="news-section">Tin Tức</a></li>
+                <li><a href="#games-section" class="nav-link" data-section="games-section">Thư Viện</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="nav-icon-btn" id="btn-notif" title="Thông báo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                    <span class="nav-badge" id="notif-badge">3</span>
+                </button>
+                <button class="nav-icon-btn" id="btn-cart" title="Giỏ hàng">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                    <span class="nav-badge" id="cart-badge">2</span>
+                </button>
+                <button class="btn-nav-cta" id="btn-nav-play">Chơi Ngay ▶</button>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <!-- Notification Dropdown -->
+                <div class="notif-dropdown" id="notif-dropdown">
+                    <div class="notif-header">
+                        <div class="notif-title">
+                            <span class="notif-icon-head">🔔</span>
+                            <span>Thông Báo Mới</span>
+                            <span class="notif-badge-pill" id="notif-pill">3 Mới</span>
+                        </div>
+                        <button class="notif-mark-btn" id="btn-mark-all-read">Đã đọc tất cả</button>
+                    </div>
+                    <div class="notif-items" id="notif-items">
+                        <div class="notif-card unread" data-action="scroll" data-target="#games-section">
+                            <div class="notif-card-icon notif-purple">🎮</div>
+                            <div class="notif-card-body">
+                                <strong>Void Strike: Season 3</strong>
+                                <p>Mùa giải xếp hạng 2026 chính thức khởi tranh. Nhận trang phục độc quyền!</p>
+                                <span class="notif-card-time">5 phút trước</span>
+                            </div>
+                            <span class="notif-status-dot"></span>
+                        </div>
+                        <div class="notif-card unread" data-action="scroll" data-target="#cta-section">
+                            <div class="notif-card-icon notif-cyan">🎁</div>
+                            <div class="notif-card-body">
+                                <strong>GameVerse VIP 30 Ngày</strong>
+                                <p>Bạn vừa nhận được gói VIP 30 ngày trải nghiệm toàn bộ 500+ game miễn phí.</p>
+                                <span class="notif-card-time">1 giờ trước</span>
+                            </div>
+                            <span class="notif-status-dot"></span>
+                        </div>
+                        <div class="notif-card unread" data-action="scroll" data-target="#esports-section">
+                            <div class="notif-card-icon notif-gold">🏆</div>
+                            <div class="notif-card-body">
+                                <strong>Grand Championship 2026</strong>
+                                <p>Mở cổng đăng ký giải đấu toàn quốc tổng giải thưởng 1 tỷ VNĐ.</p>
+                                <span class="notif-card-time">Hôm nay</span>
+                            </div>
+                            <span class="notif-status-dot"></span>
+                        </div>
+                    </div>
+                    <div class="notif-footer">
+                        <a href="#news-section" id="notif-see-all">Xem tất cả tin tức & sự kiện →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- =========================================================
+       HERO SECTION
+       ========================================================= -->
+    <section class="hero" id="hero">
+        <canvas id="particles-canvas" class="hero-particles"></canvas>
+        <div class="hero-bg">
+            <img src="~/images/gaming_hero_banner.jpg" alt="GameVerse Hero" class="hero-bg-img" />
+            <div class="hero-overlay"></div>
+            <div class="hero-grid-overlay"></div>
+        </div>
+
+        <!-- Floating Game Cards -->
+        <div class="hero-floats">
+            <div class="float-card float-card-1">
+                <img src="~/images/game_rpg_cover.jpg" alt="" />
+                <div class="float-card-info"><strong>Dragon Realm</strong><span>⭐ 9.4</span></div>
+            </div>
+            <div class="float-card float-card-2">
+                <img src="~/images/game_shooter_cover.jpg" alt="" />
+                <div class="float-card-info"><strong>Void Strike</strong><span>⭐ 9.1</span></div>
+            </div>
+            <div class="float-card float-card-3">
+                <img src="~/images/game_horror_cover.jpg" alt="" />
+                <div class="float-card-info"><strong>Shadow Hospital</strong><span>⭐ 9.2</span></div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">🔥 #1 Nền Tảng Game Việt Nam 2026</div>
+            <h1 class="hero-title">
+                <span class="hero-line-1">Khám Phá</span>
+                <span class="hero-line-2">Thế Giới Game</span>
+                <span class="hero-line-3 gradient-text">Đỉnh Cao</span>
+            </h1>
+            <p class="hero-desc">Hơn <strong>500+ tựa game</strong> đỉnh cao từ RPG, Shooter, Esports cho đến Chiến Thuật — tất cả trong một nền tảng duy nhất. Trải nghiệm gaming như chưa bao giờ có.</p>
+
+            <!-- Search Bar inside Hero -->
+            <div class="search-bar" id="search-bar">
+                <div class="search-inner">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    <input type="text" id="search-input" placeholder="Tìm game, thể loại, nhà phát hành..." autocomplete="off" />
+                    <button class="search-btn">Tìm</button>
+                </div>
+                <ul class="search-suggestions" id="search-suggestions"></ul>
+            </div>
+
+            <div class="hero-btns">
+                <button class="btn-primary" id="btn-hero-explore">🎮 Khám Phá Ngay</button>
+                <button class="btn-secondary" id="btn-hero-trailer">▶ Xem Trailer</button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">Tựa Game</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-num">2M+</span>
+                    <span class="stat-label">Game Thủ</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-num">50+</span>
+                    <span class="stat-label">Giải Đấu</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-num">4.9★</span>
+                    <span class="stat-label">Đánh Giá</span>
+                </div>
+            </div>
+
+            <div class="hero-online-bar">
+                <span class="online-dot"></span>
+                <span>GameVerse 2026 – Hơn <strong>2M+</strong> game thủ đang online</span>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>Cuộn Xuống</span>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       GENRES BENTO GRID
+       ========================================================= -->
+    <section class="genres-section" id="genres-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🎮 Thể Loại</span>
+                <h2 class="section-title">Khám Phá <span class="gradient-text">Mọi Thể Loại</span></h2>
+                <p class="section-desc">Từ phiêu lưu hành động đến chiến lược đỉnh cao, chúng tôi có tất cả.</p>
+            </div>
+
+            <div class="genres-bento">
+                <div class="genre-card genre-rpg" data-genre-card="rpg" title="Xem game RPG">
+                    <div class="genre-img-wrap">
+                        <img src="~/images/game_rpg_cover.jpg" alt="RPG" />
+                    </div>
+                    <div class="genre-info">
+                        <div class="genre-icon">🗡️</div>
+                        <h3>RPG</h3>
+                        <p>120+ game</p>
+                    </div>
+                    <div class="genre-hover-overlay"></div>
+                </div>
+                <div class="genre-card genre-shooter" data-genre-card="shooter" title="Xem game Bắn Súng">
+                    <div class="genre-img-wrap">
+                        <img src="~/images/game_shooter_cover.jpg" alt="Shooter" />
+                    </div>
+                    <div class="genre-info">
+                        <div class="genre-icon">🎯</div>
+                        <h3>Bắn Súng</h3>
+                        <p>95+ game</p>
+                    </div>
+                    <div class="genre-hover-overlay"></div>
+                </div>
+                <div class="genre-card genre-strategy" data-genre-card="strategy" title="Xem game Chiến Thuật">
+                    <div class="genre-img-wrap">
+                        <img src="~/images/game_strategy_cover.jpg" alt="Strategy" />
+                    </div>
+                    <div class="genre-info">
+                        <div class="genre-icon">♟️</div>
+                        <h3>Chiến Thuật</h3>
+                        <p>80+ game</p>
+                    </div>
+                    <div class="genre-hover-overlay"></div>
+                </div>
+                <div class="genre-card genre-sports" data-genre-card="sports" title="Xem game Thể Thao">
+                    <div class="genre-img-wrap">
+                        <img src="~/images/game_sports_cover.jpg" alt="Sports" />
+                    </div>
+                    <div class="genre-info">
+                        <div class="genre-icon">🌍</div>
+                        <h3>Thể Thao</h3>
+                        <p>60+ game</p>
+                    </div>
+                    <div class="genre-hover-overlay"></div>
+                </div>
+                <div class="genre-card genre-horror" data-genre-card="horror" title="Xem game Kinh Dị">
+                    <div class="genre-img-wrap">
+                        <img src="~/images/game_horror_cover.jpg" alt="Horror" />
+                    </div>
+                    <div class="genre-info">
+                        <div class="genre-icon">👻</div>
+                        <h3>Kinh Dị</h3>
+                        <p>45+ game</p>
+                    </div>
+                    <div class="genre-hover-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       SPOTLIGHT TABS
+       ========================================================= -->
+    <section class="spotlight-section" id="spotlight-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">⭐ Nổi Bật</span>
+                <h2 class="section-title">Game <span class="gradient-text">Được Yêu Thích</span></h2>
+            </div>
+
+            <div class="spotlight-tabs">
+                <button class="spotlight-tab active" data-tab="new">🆕 Mới Nhất</button>
+                <button class="spotlight-tab" data-tab="top">🏆 Top Rated</button>
+                <button class="spotlight-tab" data-tab="free">🆓 Miễn Phí</button>
+                <button class="spotlight-tab" data-tab="sale">🔥 Đang Giảm Giá</button>
+            </div>
+
+            <!-- Panel: Mới Nhất -->
+            <div class="spotlight-panel active" id="panel-new">
+                <div class="spotlight-grid">
+                    <div class="spotlight-card spotlight-main">
+                        <div class="spotlight-card-img">
+                            <img src="~/images/game_rpg_cover.jpg" alt="" />
+                            <div class="spotlight-card-badge new">MỚI</div>
+                        </div>
+                        <div class="spotlight-card-body">
+                            <span class="spotlight-genre">RPG • Open World</span>
+                            <h3>Dragon Realm Chronicles</h3>
+                            <div class="spotlight-meta">
+                                <span class="spotlight-rating">⭐ 9.4 / 10</span>
+                                <span class="spotlight-players">👥 2.1M người chơi</span>
+                            </div>
+                            <p class="spotlight-desc">Phiêu lưu sử thi trong vương quốc rồng huyền bí. Hệ thống chiến đấu đột phá, thế giới mở rộng lớn và cốt truyện sâu sắc chưa từng có.</p>
+                            <div class="spotlight-actions">
+                                <button class="btn-spotlight-primary">🎮 Chơi Ngay</button>
+                                <button class="btn-spotlight-secondary">📋 Chi Tiết</button>
+                                <button class="btn-spotlight-wish">♡</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spotlight-sidebar">
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_shooter_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">SHOOTER</span>
+                                <strong>Void Strike Ops</strong>
+                                <span>⭐ 9.1</span>
+                            </div>
+                        </div>
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_strategy_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">STRATEGY</span>
+                                <strong>Kingdom Fall</strong>
+                                <span>⭐ 8.8</span>
+                            </div>
+                        </div>
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_horror_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">HORROR</span>
+                                <strong>Shadow Hospital</strong>
+                                <span>⭐ 9.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Top Rated -->
+            <div class="spotlight-panel" id="panel-top">
+                <div class="spotlight-grid">
+                    <div class="spotlight-card spotlight-main">
+                        <div class="spotlight-card-img">
+                            <img src="~/images/game_rpg_cover.jpg" alt="" />
+                            <div class="spotlight-card-badge hot">TOP #1</div>
+                        </div>
+                        <div class="spotlight-card-body">
+                            <span class="spotlight-genre">RPG • Souls-like</span>
+                            <h3>Elden Forge</h3>
+                            <div class="spotlight-meta">
+                                <span class="spotlight-rating">⭐ 9.6 / 10</span>
+                                <span class="spotlight-players">👥 3.4M người chơi</span>
+                            </div>
+                            <p class="spotlight-desc">Hành trình vào vùng đất đen tối đầy thử thách với gameplay cực kỳ khó và thỏa mãn. Game được đánh giá cao nhất năm 2024.</p>
+                            <div class="spotlight-actions">
+                                <button class="btn-spotlight-primary">🎮 Chơi Ngay</button>
+                                <button class="btn-spotlight-secondary">📋 Chi Tiết</button>
+                                <button class="btn-spotlight-wish">♡</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spotlight-sidebar">
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_horror_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">HORROR</span>
+                                <strong>Shadow Hospital</strong>
+                                <span>⭐ 9.2</span>
+                            </div>
+                        </div>
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_rpg_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">RPG</span>
+                                <strong>Dragon Realm</strong>
+                                <span>⭐ 9.4</span>
+                            </div>
+                        </div>
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_shooter_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">SHOOTER</span>
+                                <strong>Void Strike Ops</strong>
+                                <span>⭐ 9.1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Miễn Phí -->
+            <div class="spotlight-panel" id="panel-free">
+                <div class="spotlight-grid">
+                    <div class="spotlight-card spotlight-main">
+                        <div class="spotlight-card-img">
+                            <img src="~/images/game_shooter_cover.jpg" alt="" />
+                            <div class="spotlight-card-badge free">FREE</div>
+                        </div>
+                        <div class="spotlight-card-body">
+                            <span class="spotlight-genre">SHOOTER • Battle Royale</span>
+                            <h3>Tactical Warzone</h3>
+                            <div class="spotlight-meta">
+                                <span class="spotlight-rating">⭐ 8.7 / 10</span>
+                                <span class="spotlight-players">👥 6.1M người chơi</span>
+                            </div>
+                            <p class="spotlight-desc">Battle Royale miễn phí với 100 người chơi, bản đồ khổng lồ và vũ khí đa dạng. Trải nghiệm đỉnh cao hoàn toàn không tốn phí.</p>
+                            <div class="spotlight-actions">
+                                <button class="btn-spotlight-primary">🎮 Tải Miễn Phí</button>
+                                <button class="btn-spotlight-secondary">📋 Chi Tiết</button>
+                                <button class="btn-spotlight-wish">♡</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spotlight-sidebar">
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_sports_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">SPORTS</span>
+                                <strong>FIFA Ultimate</strong>
+                                <span>⭐ 8.5</span>
+                            </div>
+                        </div>
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_strategy_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">STRATEGY</span>
+                                <strong>Kingdom Fall</strong>
+                                <span>⭐ 8.8</span>
+                            </div>
+                        </div>
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_horror_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">HORROR</span>
+                                <strong>Haunted Manor</strong>
+                                <span>⭐ 8.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Đang Giảm Giá -->
+            <div class="spotlight-panel" id="panel-sale">
+                <div class="spotlight-grid">
+                    <div class="spotlight-card spotlight-main">
+                        <div class="spotlight-card-img">
+                            <img src="~/images/game_strategy_cover.jpg" alt="" />
+                            <div class="spotlight-card-badge sale">-70%</div>
+                        </div>
+                        <div class="spotlight-card-body">
+                            <span class="spotlight-genre">STRATEGY • Medieval</span>
+                            <h3>Kingdom Fall: Empire Wars</h3>
+                            <div class="spotlight-meta">
+                                <span class="spotlight-rating">⭐ 8.8 / 10</span>
+                                <span class="spotlight-players">👥 1.2M người chơi</span>
+                            </div>
+                            <p class="spotlight-desc">Xây dựng đế chế hùng mạnh và chinh phục. Flash Sale 70% chỉ còn hôm nay! Đừng bỏ lỡ cơ hội sở hữu game chiến thuật đỉnh nhất.</p>
+                            <div class="spotlight-actions">
+                                <button class="btn-spotlight-primary">💰 Mua Ngay -70%</button>
+                                <button class="btn-spotlight-secondary">📋 Chi Tiết</button>
+                                <button class="btn-spotlight-wish">♡</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spotlight-sidebar">
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_rpg_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">RPG -50%</span>
+                                <strong>Dragon Realm</strong>
+                                <span>⭐ 9.4</span>
+                            </div>
+                        </div>
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_sports_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">SPORTS -40%</span>
+                                <strong>FIFA Ultimate 25</strong>
+                                <span>⭐ 8.5</span>
+                            </div>
+                        </div>
+                        <div class="spotlight-mini">
+                            <img src="~/images/game_horror_cover.jpg" alt="" />
+                            <div class="spotlight-mini-info">
+                                <span class="spotlight-mini-genre">HORROR -60%</span>
+                                <strong>Shadow Hospital</strong>
+                                <span>⭐ 9.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       TRENDING HORIZONTAL SCROLL
+       ========================================================= -->
+    <section class="trending-section" id="trending-section">
+        <div class="container">
+            <div class="section-header trending-header">
+                <div>
+                    <span class="section-tag">📈 Đang Hot</span>
+                    <h2 class="section-title">Game <span class="gradient-text">Trending</span></h2>
+                </div>
+                <div class="trend-controls">
+                    <button class="trend-btn trend-btn-left">&#8592;</button>
+                    <button class="trend-btn trend-btn-right">&#8594;</button>
+                </div>
+            </div>
+
+            <div class="trending-wrapper">
+                <div class="trending-track">
+                    <div class="trending-card">
+                        <div class="trending-rank">01</div>
+                        <div class="trending-img">
+                            <img src="~/images/game_rpg_cover.jpg" alt="Dragon Realm Chronicles" />
+                        </div>
+                        <div class="trending-info">
+                            <span class="trending-genre">RPG</span>
+                            <h4>Dragon Realm Chronicles</h4>
+                            <div class="trending-meta">
+                                <span>⭐ 9.4</span>
+                                <span>👥 2.1M</span>
+                            </div>
+                            <div class="trending-bar"><div class="trending-fill" style="width:94%"></div></div>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-rank">02</div>
+                        <div class="trending-img">
+                            <img src="~/images/game_shooter_cover.jpg" alt="Void Strike Ops" />
+                        </div>
+                        <div class="trending-info">
+                            <span class="trending-genre">SHOOTER</span>
+                            <h4>Void Strike Ops</h4>
+                            <div class="trending-meta">
+                                <span>⭐ 9.1</span>
+                                <span>👥 5.3M</span>
+                            </div>
+                            <div class="trending-bar"><div class="trending-fill" style="width:91%"></div></div>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-rank">03</div>
+                        <div class="trending-img">
+                            <img src="~/images/game_horror_cover.jpg" alt="Shadow Hospital" />
+                        </div>
+                        <div class="trending-info">
+                            <span class="trending-genre">HORROR</span>
+                            <h4>Shadow Hospital</h4>
+                            <div class="trending-meta">
+                                <span>⭐ 9.2</span>
+                                <span>👥 0.8M</span>
+                            </div>
+                            <div class="trending-bar"><div class="trending-fill" style="width:92%"></div></div>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-rank">04</div>
+                        <div class="trending-img">
+                            <img src="~/images/game_strategy_cover.jpg" alt="Kingdom Fall" />
+                        </div>
+                        <div class="trending-info">
+                            <span class="trending-genre">STRATEGY</span>
+                            <h4>Kingdom Fall</h4>
+                            <div class="trending-meta">
+                                <span>⭐ 8.8</span>
+                                <span>👥 1.2M</span>
+                            </div>
+                            <div class="trending-bar"><div class="trending-fill" style="width:88%"></div></div>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-rank">05</div>
+                        <div class="trending-img">
+                            <img src="~/images/game_sports_cover.jpg" alt="FIFA Ultimate 25" />
+                        </div>
+                        <div class="trending-info">
+                            <span class="trending-genre">SPORTS</span>
+                            <h4>FIFA Ultimate 25</h4>
+                            <div class="trending-meta">
+                                <span>⭐ 8.5</span>
+                                <span>👥 8.9M</span>
+                            </div>
+                            <div class="trending-bar"><div class="trending-fill" style="width:85%"></div></div>
+                        </div>
+                    </div>
+                    <div class="trending-card">
+                        <div class="trending-rank">06</div>
+                        <div class="trending-img">
+                            <img src="~/images/game_rpg_cover.jpg" alt="Elden Forge" />
+                        </div>
+                        <div class="trending-info">
+                            <span class="trending-genre">RPG</span>
+                            <h4>Elden Forge</h4>
+                            <div class="trending-meta">
+                                <span>⭐ 9.6</span>
+                                <span>👥 3.4M</span>
+                            </div>
+                            <div class="trending-bar"><div class="trending-fill" style="width:96%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       ESPORTS SECTION
+       ========================================================= -->
+    <section class="esports-section" id="esports-section">
+        <div class="esports-bg">
+            <img src="~/images/gaming_hero_banner.jpg" alt="Esports Arena" class="esports-bg-img" />
+            <div class="esports-overlay"></div>
+        </div>
+        <div class="container esports-content">
+            <div class="esports-left">
+                <span class="section-tag">🏆 Esports</span>
+                <h2 class="section-title">Vòng Loại <span class="gradient-text">GameVerse</span><br />Grand Championship 2026</h2>
+                <p>Tham gia giải đấu esports lớn nhất Việt Nam! Tổng giải thưởng lên đến <strong>1 tỷ VNĐ</strong>. Đăng ký ngay để cạnh tranh với những game thủ xuất sắc nhất.</p>
+
+                <div class="esports-stats">
+                    <div class="esport-stat">
+                        <span class="esport-stat-num">1 tỷ</span>
+                        <span class="esport-stat-label">Giải Thưởng VNĐ</span>
+                    </div>
+                    <div class="esport-stat">
+                        <span class="esport-stat-num">256</span>
+                        <span class="esport-stat-label">Đội Tham Gia</span>
+                    </div>
+                    <div class="esport-stat">
+                        <span class="esport-stat-num">12</span>
+                        <span class="esport-stat-label">Thành Phố</span>
+                    </div>
+                </div>
+
+                <button class="btn-esports-register">🏆 Đăng Ký Tham Gia</button>
+            </div>
+
+            <div class="esports-right">
+                <div class="countdown-card">
+                    <p class="countdown-label">🔴 LIVE – Giải Đấu Bắt Đầu Sau</p>
+                    <div class="countdown-grid">
+                        <div class="countdown-item">
+                            <span class="countdown-num" id="cd-days">00</span>
+                            <span class="countdown-unit">Ngày</span>
+                        </div>
+                        <div class="countdown-sep">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-num" id="cd-hours">00</span>
+                            <span class="countdown-unit">Giờ</span>
+                        </div>
+                        <div class="countdown-sep">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-num" id="cd-minutes">00</span>
+                            <span class="countdown-unit">Phút</span>
+                        </div>
+                        <div class="countdown-sep">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-num" id="cd-seconds">00</span>
+                            <span class="countdown-unit">Giây</span>
+                        </div>
+                    </div>
+                    <div class="teams-playing">
+                        <div class="team-avatar" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4)">GX</div>
+                        <div class="team-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">VS</div>
+                        <div class="team-avatar" style="background:linear-gradient(135deg,#22c55e,#06b6d4)">DT</div>
+                        <span class="teams-vs">VS</span>
+                        <div class="team-avatar" style="background:linear-gradient(135deg,#ec4899,#8b5cf6)">NR</div>
+                        <div class="team-avatar" style="background:linear-gradient(135deg,#ef4444,#f59e0b)">SK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       GAMES GRID
+       ========================================================= -->
+    <section class="games-section" id="games-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🎮 Kho Game</span>
+                <h2 class="section-title">Tất Cả <span class="gradient-text">Tựa Game</span></h2>
+                <p class="section-desc">Lọc và tìm kiếm game phù hợp với phong cách chơi của bạn.</p>
+            </div>
+
+            <div class="games-toolbar">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-genre="all">Tất Cả</button>
+                    <button class="filter-btn" data-genre="rpg">🗡️ RPG</button>
+                    <button class="filter-btn" data-genre="shooter">🎯 Shooter</button>
+                    <button class="filter-btn" data-genre="strategy">♟️ Chiến Thuật</button>
+                    <button class="filter-btn" data-genre="racing">🚗 Đua Xe</button>
+                    <button class="filter-btn" data-genre="sports">🌍 Thể Thao</button>
+                    <button class="filter-btn" data-genre="horror">👻 Kinh Dị</button>
+                </div>
+                <div class="games-controls">
+                    <select id="sort-select" class="sort-select">
+                        <option value="rating">Đánh Giá Cao Nhất</option>
+                        <option value="players">Nhiều Người Chơi Nhất</option>
+                        <option value="newest">Mới Nhất</option>
+                    </select>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid" title="Grid view">⊞</button>
+                        <button class="view-btn" data-view="list" title="List view">≡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="games-count-bar">
+                <span>Hiển thị <span id="games-count">8 game</span></span>
+            </div>
+
+            <div class="games-grid" id="games-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       NEWS SECTION
+       ========================================================= -->
+    <section class="news-section" id="news-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📰 Tin Tức</span>
+                <h2 class="section-title">Tin Tức <span class="gradient-text">Mới Nhất</span></h2>
+                <p class="section-desc">Cập nhật nhanh nhất về thế giới gaming, esports và công nghệ.</p>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-card news-card-featured">
+                    <div class="news-card-img">
+                        <img src="~/images/game_rpg_cover.jpg" alt="News 1" />
+                        <span class="news-tag">RPG</span>
+                    </div>
+                    <div class="news-card-body">
+                        <span class="news-date">16/10/2026</span>
+                        <h3>Dragon Realm Chronicles Phát Hành DLC Khổng Lồ – Thêm 50 Giờ Chơi</h3>
+                        <p>Studio Crimson Forge vừa công bố DLC "The Eternal Rift" sẽ bổ sung hơn 50 giờ nội dung mới, bao gồm vùng đất mới, boss huyền thoại và hệ thống công đoàn người chơi...</p>
+                        <a href="#" class="news-read-more">Đọc Thêm →</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-card-img">
+                        <img src="~/images/game_shooter_cover.jpg" alt="News 2" />
+                        <span class="news-tag">Esports</span>
+                    </div>
+                    <div class="news-card-body">
+                        <span class="news-date">15/10/2026</span>
+                        <h3>Void Strike World Cup 2026 – Việt Nam Vào Tứ Kết</h3>
+                        <p>Team VN Legends đã có màn trình diễn xuất sắc để giành vé vào tứ kết VWC 2026...</p>
+                        <a href="#" class="news-read-more">Đọc Thêm →</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-card-img">
+                        <img src="~/images/game_strategy_cover.jpg" alt="News 3" />
+                        <span class="news-tag">Update</span>
+                    </div>
+                    <div class="news-card-body">
+                        <span class="news-date">14/10/2026</span>
+                        <h3>Kingdom Fall: Empire Wars – Bản Cập Nhật 3.0 Ra Mắt</h3>
+                        <p>Bản cập nhật lớn nhất trong lịch sử Kingdom Fall mang đến chế độ Siege Warfare hoàn toàn mới...</p>
+                        <a href="#" class="news-read-more">Đọc Thêm →</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-card-img">
+                        <img src="~/images/game_horror_cover.jpg" alt="News 4" />
+                        <span class="news-tag">Horror</span>
+                    </div>
+                    <div class="news-card-body">
+                        <span class="news-date">13/10/2026</span>
+                        <h3>Shadow Hospital 2 Chính Thức Được Công Bố – Trailer Gây Sốt</h3>
+                        <p>Sau thành công vang dội của phần 1, studio Dark Lantern đã tiết lộ phần tiếp theo với đồ họa kinh dị đỉnh cao...</p>
+                        <a href="#" class="news-read-more">Đọc Thêm →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       REVIEWS MARQUEE
+       ========================================================= -->
+    <section class="reviews-section" id="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">💬 Đánh Giá</span>
+                <h2 class="section-title">Game Thủ <span class="gradient-text">Nói Gì?</span></h2>
+            </div>
+
+            <div class="reviews-stats-bar">
+                <div class="stat-item">
+                    <span class="stat-big">4.9</span>
+                    <div class="stat-stars">★★★★★</div>
+                    <span class="stat-label">Điểm trung bình</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-big">50K+</span>
+                    <div class="stat-stars">💬</div>
+                    <span class="stat-label">Lượt đánh giá</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-big">98%</span>
+                    <div class="stat-stars">👍</div>
+                    <span class="stat-label">Hài lòng</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews-marquee">
+            <div class="reviews-track">
+                <div class="rev-card"><div class="rev-stars">★★★★★</div><p>"GameVerse là trang game xịn nhất VN. Cập nhật nhanh, thông tin đầy đủ!"</p><div class="rev-author"><div class="rev-av" style="background:linear-gradient(135deg,#22c55e,#06b6d4)">DK</div><div><strong>Đức Khoa</strong><span>Pro Gamer</span></div></div></div>
+                <div class="rev-card"><div class="rev-stars">★★★★★</div><p>"Tôi đã tìm được nhiều game hay trên GameVerse mà không có ở đâu cả. Tuyệt vời!"</p><div class="rev-author"><div class="rev-av" style="background:linear-gradient(135deg,#f97316,#fbbf24)">BK</div><div><strong>Bảo Khánh</strong><span>Mobile Gamer</span></div></div></div>
+                <div class="rev-card"><div class="rev-stars">★★★★★</div><p>"Giải esports GameVerse rất chuyên nghiệp. Tôi đã tham gia và win được giải ba!"</p><div class="rev-author"><div class="rev-av" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">HT</div><div><strong>Hùng Trần</strong><span>Esports Player</span></div></div></div>
+                <div class="rev-card"><div class="rev-stars">★★★★☆</div><p>"Giao diện đẹp, dễ tìm game. Tôi thích phần tin tức esports cập nhật liên tục."</p><div class="rev-author"><div class="rev-av" style="background:linear-gradient(135deg,#06b6d4,#6366f1)">LM</div><div><strong>Lan Minh</strong><span>Casual Gamer</span></div></div></div>
+                <div class="rev-card"><div class="rev-stars">★★★★★</div><p>"Kho game khổng lồ, đánh giá trung thực. Đây là trang review game tôi tin nhất!"</p><div class="rev-author"><div class="rev-av" style="background:linear-gradient(135deg,#ef4444,#f59e0b)">TV</div><div><strong>Tuấn Vũ</strong><span>Content Creator</span></div></div></div>
+                <div class="rev-card"><div class="rev-stars">★★★★★</div><p>"GameVerse là trang game xịn nhất VN. Cập nhật nhanh, thông tin đầy đủ!"</p><div class="rev-author"><div class="rev-av" style="background:linear-gradient(135deg,#22c55e,#06b6d4)">DK</div><div><strong>Đức Khoa</strong><span>Pro Gamer</span></div></div></div>
+                <div class="rev-card"><div class="rev-stars">★★★★★</div><p>"Tôi đã tìm được nhiều game hay trên GameVerse mà không có ở đâu cả. Tuyệt vời!"</p><div class="rev-author"><div class="rev-av" style="background:linear-gradient(135deg,#f97316,#fbbf24)">BK</div><div><strong>Bảo Khánh</strong><span>Mobile Gamer</span></div></div></div>
+                <div class="rev-card"><div class="rev-stars">★★★★★</div><p>"Giải esports GameVerse rất chuyên nghiệp. Tôi đã tham gia và win được giải ba!"</p><div class="rev-author"><div class="rev-av" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">HT</div><div><strong>Hùng Trần</strong><span>Esports Player</span></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       CTA SECTION
+       ========================================================= -->
+    <section class="cta-section" id="cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-glow"></div>
+                <span class="section-tag">🚀 Bắt Đầu</span>
+                <h2>Tham Gia<br /><span class="gradient-text">GameVerse VIP</span><br />Ngay Hôm Nay!</h2>
+                <p>Nhận ngay 30 ngày VIP miễn phí. Truy cập không giới hạn 500+ game, ưu tiên trong giải đấu, và nhiều đặc quyền độc quyền khác.</p>
+                <div class="cta-features">
+                    <span>✅ Miễn phí 30 ngày đầu</span>
+                    <span>✅ 500+ tựa game đỉnh cao</span>
+                    <span>✅ Ưu tiên đăng ký giải đấu</span>
+                    <span>✅ Hỗ trợ 24/7</span>
+                </div>
+                <div class="cta-btns">
+                    <button class="btn-cta-primary">🎮 Bắt Đầu Miễn Phí</button>
+                    <button class="btn-cta-secondary">Tìm Hiểu Thêm →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       CONTACT SECTION
+       ========================================================= -->
+    <section class="contact-section" id="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📬 Liên Hệ</span>
+                <h2 class="section-title">Liên Hệ <span class="gradient-text">Với Chúng Tôi</span></h2>
+                <p class="section-desc">Có câu hỏi, muốn hợp tác hay cần hỗ trợ kỹ thuật? Đội ngũ GameVerse luôn sẵn sàng phục vụ bạn 24/7.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📧</div>
+                        <div><strong>Email</strong><span>hello@gameverse.vn</span></div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📞</div>
+                        <div><strong>Hotline</strong><span>1800-GAMEVERSE (Miễn phí)</span></div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">💬</div>
+                        <div><strong>Discord</strong><span>discord.gg/gameverse</span></div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📍</div>
+                        <div><strong>Địa Chỉ</strong><span>Tòa nhà GameVerse, Quận 1, TP.HCM</span></div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Họ và Tên *</label>
+                            <input type="text" name="name" placeholder="Nguyễn Văn A" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="email" placeholder="email@example.com" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Chủ Đề</label>
+                        <select name="subject">
+                            <option>Hỗ trợ kỹ thuật</option>
+                            <option>Hợp tác kinh doanh</option>
+                            <option>Báo cáo lỗi</option>
+                            <option>Góp ý cải thiện</option>
+                            <option>Khác</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tin Nhắn</label>
+                        <textarea name="message" rows="5" placeholder="Nội dung tin nhắn của bạn..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-form-submit">📨 Gửi Tin Nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="footer-hex">⬡</div>
+                            <span>Game<span>Verse</span></span>
+                        </div>
+                        <p>Nền tảng khám phá game số 1 Việt Nam. Kết nối cộng đồng game thủ và mang đến trải nghiệm gaming tốt nhất.</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-btn" title="Facebook">f</a>
+                            <a href="#" class="social-btn" title="YouTube">▶</a>
+                            <a href="#" class="social-btn" title="Discord">💬</a>
+                            <a href="#" class="social-btn" title="TikTok">♪</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>GameVerse</h4>
+                        <ul>
+                            <li><a href="#hero">Về Chúng Tôi</a></li>
+                            <li><a href="#news-section">Blog & Tin Tức</a></li>
+                            <li><a href="#esports-section">Giải Đấu</a></li>
+                            <li><a href="#cta-section">Gói VIP</a></li>
+                            <li><a href="#contact-section">Liên Hệ Hợp Tác</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Thể Loại</h4>
+                        <ul>
+                            <li><a href="#games-section" data-genre-nav="rpg">RPG</a></li>
+                            <li><a href="#games-section" data-genre-nav="shooter">Bắn Súng</a></li>
+                            <li><a href="#games-section" data-genre-nav="strategy">Chiến Thuật</a></li>
+                            <li><a href="#games-section" data-genre-nav="racing">Đua Xe</a></li>
+                            <li><a href="#games-section" data-genre-nav="sports">Thể Thao</a></li>
+                            <li><a href="#games-section" data-genre-nav="horror">Kinh Dị</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Hỗ Trợ</h4>
+                        <ul>
+                            <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                            <li><a href="#">Chính Sách Bảo Mật</a></li>
+                            <li><a href="#">Điều Khoản Sử Dụng</a></li>
+                            <li><a href="#">Hỗ Trợ Kỹ Thuật</a></li>
+                            <li><a href="#">Báo Cáo Lỗi</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Đăng Ký Nhận Tin</h4>
+                        <p style="font-size:0.875rem;color:var(--text-2);margin-bottom:1rem;">Nhận thông báo game mới, khuyến mãi và tin tức esports.</p>
+                        <div class="footer-newsletter">
+                            <input type="email" placeholder="Email của bạn..." />
+                            <button>→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 GameVerse. Bảo lưu mọi quyền. Thiết kế với ❤️ tại Việt Nam 🇻🇳</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" style="opacity:0;pointer-events:none;">↑</button>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-box" id="modal-box">
+            <button class="modal-close-btn" id="modal-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+            </button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="~/js/gameverse.js" asp-append-version="true"></script>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <div class="cart-drawer-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                <span>Giỏ Hàng Game</span>
+                <span class="cart-badge-count" id="cart-drawer-count">2</span>
+            </div>
+            <button class="cart-drawer-close" id="cart-drawer-close" title="Đóng">&times;</button>
+        </div>
+        <div class="cart-drawer-body" id="cart-items-container">
+            <!-- Dynamic cart items rendered via JS -->
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-promo-row">
+                <input type="text" id="cart-promo-input" placeholder="Mã giảm giá (nhập VIP50)" />
+                <button id="btn-apply-promo">Áp Dụng</button>
+            </div>
+            <div class="cart-summary-row">
+                <span>Tạm tính:</span>
+                <span id="cart-subtotal">849.000₫</span>
+            </div>
+            <div class="cart-summary-row discount-row" id="discount-row" style="display:none;">
+                <span>Giảm giá (VIP50):</span>
+                <span class="discount-val" id="cart-discount">-424.500₫</span>
+            </div>
+            <div class="cart-summary-row total-row">
+                <span>Tổng cộng:</span>
+                <span class="total-price" id="cart-total">849.000₫</span>
+            </div>
+            <button class="btn-cart-checkout" id="btn-cart-checkout">🚀 Tiến Hành Thanh Toán</button>
+            <button class="btn-cart-continue" id="btn-cart-continue">Tiếp Tục Khám Phá Game</button>
+        </div>
+    </div>
+
+    <!-- Trailer Modal -->
+    <div class="trailer-modal-overlay" id="trailer-modal-overlay">
+        <div class="trailer-modal-box">
+            <button class="trailer-modal-close" id="trailer-modal-close">&times;</button>
+            <div class="trailer-video-wrapper">
+                <div class="trailer-screen">
+                    <canvas id="trailer-canvas" class="trailer-canvas"></canvas>
+                    <div class="trailer-screen-overlay">
+                        <div class="trailer-play-icon" id="trailer-play-btn">▶</div>
+                        <h3 class="trailer-screen-title">Dragon Realm Chronicles: The Eternal Rift</h3>
+                        <p class="trailer-screen-sub">Official Cinematic 4K Teaser Trailer 2026</p>
+                        <div class="trailer-hud-tags">
+                            <span>🎮 Unreal Engine 5.4</span>
+                            <span>⚡ Ray Tracing Active</span>
+                            <span>🎧 Dolby Atmos Sound</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="trailer-modal-info">
+                <div>
+                    <h3 class="trailer-info-title">Dragon Realm Chronicles</h3>
+                    <p class="trailer-info-desc">Khám phá thế giới mở kỳ ảo rộng lớn, hệ thống kỹ năng đột phá và đồ họa siêu thực 4K.</p>
+                </div>
+                <div class="trailer-info-actions">
+                    <button class="btn-trailer-action" onclick="openGameModal(1)">▶ Xem Chi Tiết Game</button>
+                    <button class="btn-trailer-cart" onclick="addToCart(1)">🛒 Mua Ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
