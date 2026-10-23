@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KI_1_NAM_4\\Công_Nghệ_ASPNET\\day_2\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA.csproj": {}
+    "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_2\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA.csproj": {}
   },
   "projects": {
-    "D:\\KI_1_NAM_4\\Công_Nghệ_ASPNET\\day_2\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA.csproj": {
+    "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_2\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KI_1_NAM_4\\Công_Nghệ_ASPNET\\day_2\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA.csproj",
+        "projectUniqueName": "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_2\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA.csproj",
         "projectName": "PHAMTRONGHOANGHA",
-        "projectPath": "D:\\KI_1_NAM_4\\Công_Nghệ_ASPNET\\day_2\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA.csproj",
+        "projectPath": "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_2\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA.csproj",
         "packagesPath": "C:\\Users\\pthhc\\.nuget\\packages\\",
-        "outputPath": "D:\\KI_1_NAM_4\\Công_Nghệ_ASPNET\\day_2\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA\\obj\\",
+        "outputPath": "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_2\\PHAMTRONGHOANGHA\\PHAMTRONGHOANGHA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
