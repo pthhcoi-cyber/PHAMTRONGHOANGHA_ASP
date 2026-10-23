@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASPNET\\day 1.1\\day 1.1\\day 1.1.csproj": {}
+    "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_1\\bài_1\\day 1.1\\day 1.1.csproj": {}
   },
   "projects": {
-    "D:\\ASPNET\\day 1.1\\day 1.1\\day 1.1.csproj": {
+    "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_1\\bài_1\\day 1.1\\day 1.1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASPNET\\day 1.1\\day 1.1\\day 1.1.csproj",
+        "projectUniqueName": "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_1\\bài_1\\day 1.1\\day 1.1.csproj",
         "projectName": "day 1.1",
-        "projectPath": "D:\\ASPNET\\day 1.1\\day 1.1\\day 1.1.csproj",
+        "projectPath": "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_1\\bài_1\\day 1.1\\day 1.1.csproj",
         "packagesPath": "C:\\Users\\pthhc\\.nuget\\packages\\",
-        "outputPath": "D:\\ASPNET\\day 1.1\\day 1.1\\obj\\",
+        "outputPath": "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_1\\bài_1\\day 1.1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\KÌ_1_NĂM_4\\Công_Nghệ_ASPNET\\day_1\\Giới_Thiệu_Game\\bai1\\bai1.csproj",
+      "projectUniqueName": "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_1\\Giới_Thiệu_Game\\bai1\\bai1.csproj",
       "projectName": "bai1",
-      "projectPath": "D:\\KÌ_1_NĂM_4\\Công_Nghệ_ASPNET\\day_1\\Giới_Thiệu_Game\\bai1\\bai1.csproj",
+      "projectPath": "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_1\\Giới_Thiệu_Game\\bai1\\bai1.csproj",
       "packagesPath": "C:\\Users\\pthhc\\.nuget\\packages\\",
-      "outputPath": "D:\\KÌ_1_NĂM_4\\Công_Nghệ_ASPNET\\day_1\\Giới_Thiệu_Game\\bai1\\obj\\",
+      "outputPath": "D:\\dự án 2\\.git\\PHAMTRONGHOANGHA_ASP\\day_1\\Giới_Thiệu_Game\\bai1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
