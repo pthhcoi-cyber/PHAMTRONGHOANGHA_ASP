@@ -1,0 +1,76 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PHAMTRONGHOANGHA
+build_property.RootNamespace = PHAMTRONGHOANGHA
+build_property.ProjectDir = D:\KI_1_NAM_4\Công_Nghệ_ASPNET\day_3\PHAMTRONGHOANGHA\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 10.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\KI_1_NAM_4\Công_Nghệ_ASPNET\day_3\PHAMTRONGHOANGHA
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Hello/cham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9cY2hhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Hello/Hello.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9cSGVsbG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Hello/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Hello/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9cV2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Shared/Components/RecentPosts/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUmVjZW50UG9zdHNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Shared/_NavPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KI_1_NAM_4/Công_Nghệ_ASPNET/day_3/PHAMTRONGHOANGHA/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-2b87u3q71f
